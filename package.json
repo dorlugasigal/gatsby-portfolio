@@ -23,6 +23,8 @@
     "smooth-scrollbar": "^8.5.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.6",
+    "babel-loader": "^8.0.6",
     "prettier": "^1.19.1"
   },
   "keywords": [
@@ -36,7 +38,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
