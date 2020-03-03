@@ -6,6 +6,8 @@ import Content from "../components/content"
 
 const IndexPage = () => (
   <div className="main">
+    <title>Dor Lugasi-Gal</title>
+
     <Content />
   </div>
 )
