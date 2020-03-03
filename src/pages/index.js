@@ -2,13 +2,11 @@ import React from "react"
 import "../styles/styles.scss"
 
 //import components
-import Header from "../components/header"
-import Banner from "../components/banner"
+import Content from "../components/content"
 
 const IndexPage = () => (
   <div>
-    <Header />
-    <Banner />
+    <Content />
   </div>
 )
 
