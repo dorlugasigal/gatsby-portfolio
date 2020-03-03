@@ -5,7 +5,7 @@ import "../styles/styles.scss"
 import Content from "../components/content"
 
 const IndexPage = () => (
-  <div>
+  <div className="main">
     <Content />
   </div>
 )
