@@ -7,9 +7,12 @@ const Content = () => (
     <div className="logo">
       <img alt="" src={logo} />
     </div>
+    <div id="seperator"></div>
     <div className="container">
       <div id="hi">Hi, My name is</div>
-      <div id="name">Dor Lugasi-gal</div>
+      <div className="name">
+        <div id="name">Dor Lugasi-gal</div>
+      </div>
       <div id="profession">Software Developer</div>
     </div>
   </div>
