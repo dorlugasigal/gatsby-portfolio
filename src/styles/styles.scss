@@ -107,10 +107,10 @@ body {
       animation-iteration-count: 1;
       z-index: 10;
       flex: 1;
+
       @media (max-width: 700px) {
         animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.23, 1, 0.32, 1)
           both !important;
-
         animation-delay: 0s;
       }
       #name {
@@ -138,12 +138,17 @@ body {
           border-radius: 50px;
           letter-spacing: 0.5rem;
           animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.23, 1, 0.32, 1)
-            both !important;
+            both;
 
           animation-delay: 0s;
         }
 
         &:hover {
+          @media (max-width: 700px) {
+            margin: -5px 15px;
+            box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.75);
+            font-size: 25px;
+          }
           @media (min-width: 700px) {
             transform: translateX(80px);
             letter-spacing: 1.7rem;
@@ -155,22 +160,6 @@ body {
             font-size: 60px;
             margin: -55px;
             margin-right: 120px;
-          }
-          @media (max-width: 700px) {
-            background: linear-gradient(
-              124deg,
-              #ff2400,
-              #e81d1d,
-              #e8b71d,
-              #e3e81d,
-              #1de840,
-              #1ddde8,
-              #2b1de8,
-              #dd00f3,
-              #dd00f3
-            );
-            background-size: 1800% 1800%;
-            animation: rainbow 1s ease infinite;
           }
         }
       }
@@ -376,5 +365,28 @@ body {
   }
   100% {
     background-position: 0% 82%;
+  }
+}
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
   }
 }
