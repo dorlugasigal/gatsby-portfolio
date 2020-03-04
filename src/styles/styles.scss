@@ -23,6 +23,9 @@ body {
   display: flex;
   justify-content: center; /*centers items on the line (the x-axis by default)*/
   align-items: center; /*centers items on the cross-axis (y by default)*/
+  @media (max-width: 1600px) {
+    height: 80%;
+  }
 }
 .wrapper {
   display: flex;
@@ -37,6 +40,7 @@ body {
     flex-direction: column;
     text-align: center;
     align-items: center;
+    justify-content: center;
     text-transform: uppercase;
     cursor: default;
     animation: text-focus-in 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
@@ -93,6 +97,14 @@ body {
         border-top-left-radius: $secondary-radius;
         border-bottom-right-radius: $secondary-radius;
         animation: colorchange 10s linear infinite;
+        @media (max-width: 1600px) {
+          font-size: 60px;
+          margin: 20px;
+        }
+      }
+      @media (max-width: 1600px) {
+        font-size: 50px;
+        padding: 20px;
       }
     }
 
