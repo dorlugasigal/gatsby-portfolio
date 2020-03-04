@@ -136,8 +136,9 @@ body {
     }
 
     .name {
-      animation: swing-in-left-fwd 2.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)
-        both;
+      animation: slide-in-elliptic-left-fwd 1s
+        cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
       animation-delay: 0s;
       animation-iteration-count: 1;
       z-index: 10;
@@ -237,6 +238,32 @@ body {
   100% {
     transform: rotateX(0deg);
     transform-origin: top;
+    opacity: 1;
+  }
+}
+@keyframes slide-in-blurred-left {
+  0% {
+    transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    transform-origin: 100% 50%;
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) scaleY(1) scaleX(1);
+    transform-origin: 50% 50%;
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-elliptic-left-fwd {
+  0% {
+    transform: translateX(-800px) rotateY(30deg) scale(0);
+    transform-origin: -100% 50%;
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotateY(0) scale(1);
+    transform-origin: 1800px 50%;
     opacity: 1;
   }
 }
