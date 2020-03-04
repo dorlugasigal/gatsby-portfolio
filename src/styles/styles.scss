@@ -88,6 +88,7 @@ body {
         font-weight: 300;
         letter-spacing: 0.2rem;
         padding: 10px 20px;
+        clip-path: polygon(10% 0%, 90% 0, 100% 100%, 0 100%);
 
         font-size: 11px;
       }
@@ -132,6 +133,7 @@ body {
           text-align: center;
           font-size: 20px;
           padding: 10px;
+          margin: 0 15px;
           font-weight: 400;
           border-radius: 50px;
           letter-spacing: 0.5rem;
@@ -179,6 +181,7 @@ body {
         letter-spacing: 0.2rem;
         padding: 10px 20px;
         font-size: 11px;
+        clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
       }
     }
   }
