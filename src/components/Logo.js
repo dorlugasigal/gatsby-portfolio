@@ -1,12 +1,18 @@
 import React from "react"
 
 function Logo() {
+  const mediaQuery =
+    typeof window !== "undefined" &&
+    window.matchMedia("(max-width: 700px)").matches
+  var styles = {
+    height: mediaQuery ? "250px" : "400px",
+    width: mediaQuery ? "250px" : "400px",
+  }
   return (
     <div id="logoWrapper">
       <svg
-        width="400"
         id="logo"
-        height="400"
+        style={styles}
         viewBox="0 -2 400 402"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
