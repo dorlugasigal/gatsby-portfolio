@@ -3,7 +3,8 @@ import { SocialIcon } from "react-social-icons"
 
 function SocialBar(props) {
   const mediaQuery =
-    (window && window.matchMedia("(max-width: 700px)").matches) || false
+    typeof window !== "undefined" &&
+    window.matchMedia("(max-width: 700px)").matches
   var styles = {
     height: mediaQuery ? "50px" : "75px",
     width: mediaQuery ? "50px" : "75px",
