@@ -25,17 +25,6 @@ body {
   flex-direction: column;
   justify-content: center; /*centers items on the line (the x-axis by default)*/
   align-items: center; /*centers items on the cross-axis (y by default)*/
-
-  @media (max-width: 1600px) {
-    height: 80%;
-  }
-  @media (max-width: 700px) {
-    position: unset;
-    overflow: unset;
-    padding-top: 20px;
-    justify-content: center;
-    height: 100%;
-  }
 }
 
 .socialbar {
@@ -61,9 +50,15 @@ body {
   justify-content: center;
 
   #logoWrapper {
-    -webkit-animation: fade-in-top 4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
     animation: fade-in-top 4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
     border-radius: 50%;
+    text-align: center;
+    svg {
+      @media (max-width: 700px) {
+        width: 80%;
+      }
+    }
+
     path:nth-child(1) {
       stroke-dasharray: 1201px;
       stroke-dashoffset: 1201px;
@@ -86,6 +81,9 @@ body {
     }
   }
   .logo {
+    @media (max-width: 700px) {
+      height: 100px;
+    }
     flex: 1;
   }
 }
