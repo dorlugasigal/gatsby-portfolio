@@ -6,8 +6,8 @@ function SocialBar(props) {
     typeof window !== "undefined" &&
     window.matchMedia("(max-width: 700px)").matches
   var styles = {
-    height: mediaQuery ? "50px" : "75px",
-    width: mediaQuery ? "50px" : "75px",
+    height: mediaQuery ? "50px" : "100px",
+    width: mediaQuery ? "50px" : "100px",
   }
   return (
     <div className="socialbar">
