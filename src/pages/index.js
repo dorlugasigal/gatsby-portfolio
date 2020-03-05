@@ -3,7 +3,7 @@ import "../styles/styles.scss"
 import { Helmet } from "react-helmet"
 import SocialBar from "../components/SocialBar"
 //import components
-import Content from "../components/Content"
+import Content from "../components/content"
 
 const IndexPage = () => (
   <div className="main">
