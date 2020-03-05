@@ -12,6 +12,7 @@ const IndexPage = () => (
       <title>Dor Lugasi-Gal | Software Engineer</title>
     </Helmet>
     <Content />
+    <SocialBar />
   </div>
 )
 
