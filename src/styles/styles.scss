@@ -78,17 +78,17 @@ body {
     path:nth-child(1) {
       stroke-dasharray: 1201px;
       stroke-dashoffset: 1201px;
-      animation: fill-purple-dark 3s ease-in-out forwards;
+      animation: fill-purple-dark 2s ease-in-out forwards 0.5s;
     }
     path:nth-child(3) {
       stroke-dasharray: 2921px;
       stroke-dashoffset: -2921px;
-      animation: fill-purple-light 3s ease-in-out forwards;
+      animation: fill-purple-light 2s ease-in-out forwards 0.5s;
     }
     path:nth-child(5) {
       stroke-dasharray: 1968px;
       stroke-dashoffset: 1968px;
-      animation: fill-white 3s ease-in-out forwards;
+      animation: fill-white 2.5s ease-in-out forwards 1s;
     }
     #white-stroke {
       stroke-dasharray: 1968px;
@@ -98,12 +98,12 @@ body {
     #light-stroke {
       stroke-dasharray: 2921px;
       stroke-dashoffset: -2921px;
-      animation: running-stroke 1s ease-in-out forwards;
+      animation: running-stroke 0.5s ease-in-out forwards 0.1;
     }
     #dark-stroke {
       stroke-dasharray: 1201px;
       stroke-dashoffset: 1201px;
-      animation: running-stroke 1s ease-in-out forwards;
+      animation: running-stroke 0.5s ease-in-out forwards 0.1;
     }
   }
 }
@@ -178,16 +178,22 @@ body {
     transform: translateY(-50px);
     opacity: 0;
   }
-  70% {
+  65% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
+    background-color: transparent;
     opacity: 1;
     box-shadow: none;
   }
 
-  82% {
-    box-shadow: -0px 0px 15px 5px rgba(185, 86, 241, 0.75);
-    transform: scale(1.03);
+  75% {
+    box-shadow: 0px 0px 100px 0px rgba(185, 86, 241, 0.75),
+      inset 0px 0px 60px 3px rgba(185, 86, 241, 0.75);
+    border: none;
+  }
+  85% {
+    box-shadow: 0px 0px 10px 0px rgba(255, 129, 255, 0.75),
+      inset 0px 0px 60px 3px rgba(255, 129, 255, 0.75);
   }
   100% {
     box-shadow: none;

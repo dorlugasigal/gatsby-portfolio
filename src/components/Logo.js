@@ -13,7 +13,7 @@ function Logo() {
       <svg
         id="logo"
         style={styles}
-        viewBox="0 -2 400 402"
+        viewBox="6 3 388 390"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
