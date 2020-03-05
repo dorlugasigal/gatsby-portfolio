@@ -50,7 +50,7 @@ body {
   justify-content: center;
 
   #logoWrapper {
-    animation: fade-in-top 3.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: fade-in-top 3.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
     border-radius: 50%;
     text-align: center;
     svg {
@@ -62,12 +62,12 @@ body {
     path:nth-child(1) {
       stroke-dasharray: 1201px;
       stroke-dashoffset: 1201px;
-      animation: fill-purple-dark 3s ease-in-out forwards 0.5s;
+      animation: fill-purple-dark 3s ease-in-out forwards;
     }
     path:nth-child(3) {
       stroke-dasharray: 2921px;
       stroke-dashoffset: -2921px;
-      animation: fill-purple-light 3s ease-in-out forwards 0.5s;
+      animation: fill-purple-light 3s ease-in-out forwards;
     }
     path:nth-child(5) {
       stroke-dasharray: 1968px;
@@ -168,16 +168,19 @@ body {
     transform: translateY(-50px);
     opacity: 0;
   }
-  80% {
+  70% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
+    box-shadow: none;
   }
 
-  84% {
-    transform: scale(1.02);
+  82% {
+    box-shadow: -0px 0px 15px 5px rgba(185, 86, 241, 0.75);
+    transform: scale(1.03);
   }
   100% {
+    box-shadow: none;
     transform: scale(1);
   }
 }
