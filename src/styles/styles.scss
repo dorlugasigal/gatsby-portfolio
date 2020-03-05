@@ -20,8 +20,7 @@ body {
   background-color: rgb(62, 51, 80);
 }
 .main {
-  width: 100%;
-  height: 70%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center; /*centers items on the line (the x-axis by default)*/
@@ -38,12 +37,13 @@ body {
     height: 100%;
   }
 }
+
 .socialbar {
-  display: flex;
   flex: 1;
+  display: flex;
   justify-content: center;
   width: 100%;
-  background-color: red;
+  background-color: purple;
 
   .icon {
     flex: 1;
@@ -54,23 +54,35 @@ body {
   }
 }
 .wrapper {
-  flex: 1;
+  width: 80%;
+  align-items: center;
+  flex: 2;
   display: flex;
+  justify-content: center;
+
   #logoWrapper {
+    -webkit-animation: fade-in-top 4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: fade-in-top 4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    border-radius: 50%;
     path:nth-child(1) {
       stroke-dasharray: 1201px;
       stroke-dashoffset: 1201px;
-      animation: fill-purple-dark 7s ease forwards;
+      animation: fill-purple-dark 4s ease-in-out forwards;
     }
     path:nth-child(2) {
       stroke-dasharray: 2921px;
       stroke-dashoffset: 2921px;
-      animation: fill-purple-light 8s ease forwards;
+      animation: fill-purple-light 4s ease-in-out forwards;
     }
     path:nth-child(3) {
       stroke-dasharray: 1968px;
       stroke-dashoffset: 1968px;
-      animation: fill-white 6s ease forwards;
+      animation: fill-white 4s ease-in-out forwards;
+    }
+    #white-stroke {
+      stroke-dasharray: 1968px;
+      stroke-dashoffset: 1968px;
+      animation: fill-white-2 1.5s ease-in-out forwards;
     }
   }
   .logo {
@@ -82,24 +94,35 @@ body {
   0% {
     fill: transparent;
   }
-  50% {
+  60% {
     stroke-dashoffset: 0;
+
     fill: transparent;
   }
   100% {
+    stroke-dashoffset: 0;
+
     fill: white;
+  }
+}
+@keyframes fill-white-2 {
+  0% {
+  }
+  100% {
+    stroke-dashoffset: 0;
   }
 }
 @keyframes fill-purple-light {
   0% {
     fill: transparent;
   }
-  50% {
+  80% {
     stroke-dashoffset: 0;
     fill: transparent;
   }
   100% {
     fill: #9265b8;
+    stroke-dashoffset: 0;
   }
 }
 @keyframes fill-purple-dark {
@@ -111,6 +134,47 @@ body {
     fill: transparent;
   }
   100% {
+    stroke-dashoffset: 0;
     fill: #5f3f7b;
+  }
+}
+@-webkit-keyframes fade-in-top {
+  0% {
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+  90% {
+    transform: scaleX(2);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes fade-in-top {
+  0% {
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  84% {
+    transform: scale(0.96);
+    transform: scaleX(1.05);
+  }
+  92% {
+  }
+  100% {
+    transform: scale(1);
   }
 }
