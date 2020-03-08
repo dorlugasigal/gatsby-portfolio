@@ -5,8 +5,8 @@ function Logo() {
     typeof window !== "undefined" &&
     window.matchMedia("(max-width: 700px)").matches
   var styles = {
-    height: mediaQuery ? "250px" : "400px",
-    width: mediaQuery ? "250px" : "400px",
+    height: mediaQuery ? "230px" : "400px",
+    width: mediaQuery ? "230px" : "400px",
   }
   return (
     <div id="logoWrapper">
