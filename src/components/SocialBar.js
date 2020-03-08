@@ -1,5 +1,6 @@
 import React from "react"
 import { SocialIcon } from "react-social-icons"
+import socialLinks from "./socialLinks.json"
 
 function SocialBar(props) {
   const mediaQuery =
@@ -10,34 +11,15 @@ function SocialBar(props) {
     width: mediaQuery ? "50px" : "100px",
   }
   return (
-    <div className="socialbar">
-      <div className="icon">
-        <SocialIcon style={styles} url="https://github.com/dorlugasigal" />
-      </div>
-      <div className="icon">
-        <SocialIcon
-          style={styles}
-          url="https://www.linkedin.com/in/dor-lugasi-104736131/"
-        />
-      </div>
-      <div className="icon">
-        <SocialIcon style={styles} url="https://www.facebook.com/Dor.Lugasi" />
-      </div>
-      <div className="icon">
-        <SocialIcon
-          style={styles}
-          url="https://www.youtube.com/channel/UCM-rav7cI8i8KFQ6HgjKszA"
-        />
-      </div>
-      <div className="icon">
-        <SocialIcon style={styles} url="mailto:DorLugasiGal@gmail.com" />
-      </div>
-      <div className="icon">
-        <SocialIcon
-          style={styles}
-          url="https://www.instagram.com/dorlugasigal/"
-        />
-      </div>
+    <div className="socialbar ">
+      {socialLinks.links.map((item, ind) => {
+        const className = `icon icon-${ind} `
+        return (
+          <div className={className}>
+            <SocialIcon style={styles} url={item} />
+          </div>
+        )
+      })}
     </div>
   )
 }

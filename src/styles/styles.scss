@@ -32,6 +32,24 @@ body {
   justify-content: center; /*centers items on the line (the x-axis by default)*/
   align-items: center; /*centers items on the cross-axis (y by default)*/
 }
+.icon-0 {
+  animation: bounce-in-top 1.2s both 3s;
+}
+.icon-1 {
+  animation: bounce-in-top 1.2s both 3.1s;
+}
+.icon-2 {
+  animation: bounce-in-top 1.2s both 3.2s;
+}
+.icon-3 {
+  animation: bounce-in-top 1.2s both 3.3s;
+}
+.icon-4 {
+  animation: bounce-in-top 1.2s both 3.4s;
+}
+.icon-5 {
+  animation: bounce-in-top 1.2s both 3.5s;
+}
 
 .socialbar {
   flex: 1;
@@ -56,7 +74,6 @@ body {
     @media (max-width: 700px) {
       flex: 1 0 25%;
     }
-
     .social-icon {
       @media (max-width: 700px) {
         width: 70px !important;
@@ -315,5 +332,41 @@ body {
   }
   100% {
     transform: translate(0);
+  }
+}
+@keyframes bounce-in-top {
+  0% {
+    transform: translateY(-150px);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    transform: translateY(-65px);
+    animation-timing-function: ease-in;
+  }
+  72% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  81% {
+    transform: translateY(-28px);
+    animation-timing-function: ease-in;
+  }
+  90% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  95% {
+    transform: translateY(-8px);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
   }
 }
