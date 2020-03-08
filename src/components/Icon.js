@@ -1,0 +1,58 @@
+import React, { useState } from "react"
+import * as FontAwesome from "react-icons/fa"
+import { IconContext } from "react-icons"
+export default function Icon(props) {
+  const { icon, url, background } = props
+  const size = props.size ?? "40px"
+  const [hover, setHover] = useState(false)
+
+  const components = {
+    github: FontAwesome.FaGithub,
+    stackoverflow: FontAwesome.FaStackOverflow,
+    instagram: FontAwesome.FaInstagram,
+    facebook: FontAwesome.FaFacebookF,
+    youtube: FontAwesome.FaYoutube,
+    linkedIn: FontAwesome.FaLinkedinIn,
+    mail: FontAwesome.FaMailBulk,
+    default: FontAwesome.FaQuestion,
+  }
+  const toggleHover = () => {
+    setHover(!hover)
+  }
+  var linkStyle
+
+  if (hover) {
+    linkStyle = { backgroundColor: background }
+  } else {
+    linkStyle = {}
+  }
+
+  const onClick = () => {
+    if (typeof window !== undefined) {
+      window.location = url
+    }
+  }
+  const IconName = components[icon] || FontAwesome.FaQuestion
+
+  return (
+    url &&
+    icon && (
+      <div
+        onMouseEnter={toggleHover}
+        onMouseLeave={toggleHover}
+        style={linkStyle}
+        role="button"
+        tabIndex="-1"
+        className="icon-wrapper"
+        onClick={onClick}
+        onKeyDown={onClick}
+      >
+        <IconContext.Provider
+          value={{ color: "white", size: size, className: "global-class-name" }}
+        >
+          <IconName />
+        </IconContext.Provider>
+      </div>
+    )
+  )
+}

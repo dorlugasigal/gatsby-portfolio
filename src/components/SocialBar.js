@@ -1,15 +1,8 @@
 import React from "react"
-import { SocialIcon } from "react-social-icons"
 import socialLinks from "./socialLinks.json"
+import Icon from "./Icon"
 
 function SocialBar(props) {
-  const mediaQuery =
-    typeof window !== "undefined" &&
-    window.matchMedia("(max-width: 700px)").matches
-  var styles = {
-    height: mediaQuery ? "50px" : "100px",
-    width: mediaQuery ? "50px" : "100px",
-  }
   return (
     <div className="socialbar ">
       {socialLinks.links.map((item, ind) => {
@@ -17,7 +10,12 @@ function SocialBar(props) {
         return (
           <div className={className}>
             <div className="icon">
-              <SocialIcon style={styles} url={item} />
+              <Icon
+                size
+                icon={item.icon}
+                url={item.url}
+                background={item.background}
+              />
             </div>
           </div>
         )
