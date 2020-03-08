@@ -27,32 +27,26 @@ export default function Icon(props) {
     linkStyle = {}
   }
 
-  const onClick = () => {
-    if (typeof window !== undefined) {
-      window.location = url
-    }
-  }
   const IconName = components[icon] || FontAwesome.FaQuestion
 
   return (
     url &&
     icon && (
-      <div
+      <a
+        href={url}
         onMouseEnter={toggleHover}
         onMouseLeave={toggleHover}
         style={linkStyle}
         role="button"
         tabIndex="-1"
         className="icon-wrapper"
-        onClick={onClick}
-        onKeyDown={onClick}
       >
         <IconContext.Provider
           value={{ color: "white", size: size, className: "global-class-name" }}
         >
           <IconName />
         </IconContext.Provider>
-      </div>
+      </a>
     )
   )
 }

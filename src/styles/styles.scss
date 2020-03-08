@@ -61,6 +61,11 @@ body {
   line-height: 15px;
   background-color: $primary;
   transition: all 0.3s ease-in-out;
+  display: block;
+  @media (max-width: 700px) {
+    margin: 3px;
+    padding: 5px;
+  }
 }
 .socialbar {
   flex: 1;
