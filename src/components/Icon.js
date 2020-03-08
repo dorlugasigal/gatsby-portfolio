@@ -3,8 +3,11 @@ import * as FontAwesome from "react-icons/fa"
 import { IconContext } from "react-icons"
 export default function Icon(props) {
   const { icon, url, background } = props
-  const size = props.size ?? "40px"
   const [hover, setHover] = useState(false)
+  const mediaQuery =
+    typeof window !== "undefined" &&
+    window.matchMedia("(max-width: 700px)").matches
+  const size = mediaQuery ? "15px" : "40px"
 
   const components = {
     github: FontAwesome.FaGithub,
