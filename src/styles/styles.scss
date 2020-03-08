@@ -9,7 +9,7 @@ $primary: rgb(146, 101, 184);
 $off-white: #f2f4f5;
 $primary-radius: 20px;
 $secondary-radius: 60px;
-
+$text-color: rgb(197, 102, 226);
 html,
 body {
   font-family: $font;
@@ -106,15 +106,19 @@ body {
     font-size: 50px;
     font-family: "Roboto", sans-serif;
     letter-spacing: 5px;
-
     .hi {
+      transition: all 0.2s;
       animation: fade-down 1s ease-in-out both 2.5s;
     }
     .name {
       span {
         text-transform: uppercase;
         font-weight: 700;
-        color: rgb(197, 102, 226);
+        color: $text-color;
+        transition: all 0.2s;
+        &:hover {
+          color: lighten($text-color, 10);
+        }
       }
       animation: fade 1s ease-in-out both 2.5s;
     }
@@ -183,11 +187,13 @@ body {
     fill: white;
   }
 }
+
 @keyframes running-stroke {
   to {
     stroke-dashoffset: 0;
   }
 }
+
 @keyframes fill-purple-light {
   0% {
     fill: transparent;
@@ -201,6 +207,7 @@ body {
     stroke-dashoffset: 0;
   }
 }
+
 @keyframes fill-purple-dark {
   0% {
     fill: transparent;
@@ -214,16 +221,19 @@ body {
     fill: #5f3f7b;
   }
 }
+
 @keyframes fade-down {
   0% {
     opacity: 0;
     transform: translateY(-80px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 @keyframes fade-up {
   0% {
     opacity: 0;
@@ -260,6 +270,7 @@ body {
   75% {
     box-shadow: 0px 0px 100px 0px rgba(185, 86, 241, 0.75),
       inset 0px 0px 60px 3px rgba(185, 86, 241, 0.75);
+    transform: scale(1.1);
     border: none;
   }
   85% {
