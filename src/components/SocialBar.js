@@ -13,10 +13,12 @@ function SocialBar(props) {
   return (
     <div className="socialbar ">
       {socialLinks.links.map((item, ind) => {
-        const className = `icon icon-${ind} `
+        const className = `icon-${ind} `
         return (
           <div className={className}>
-            <SocialIcon style={styles} url={item} />
+            <div className="icon">
+              <SocialIcon style={styles} url={item} />
+            </div>
           </div>
         )
       })}
