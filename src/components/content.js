@@ -4,6 +4,13 @@ import Logo from "../components/Logo" // Tell webpack this JS file uses this ima
 
 const Content = () => (
   <div className="wrapper">
+    <div className="name-wrapper">
+      <div className="hi">Hi,</div>
+      <div className="name">
+        I'm <span>Dor Lugasi-Gal</span>,
+      </div>
+      <div className="prof">Software Developer.</div>
+    </div>
     <Logo />
   </div>
 )

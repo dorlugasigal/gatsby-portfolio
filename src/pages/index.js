@@ -10,6 +10,10 @@ const IndexPage = () => (
     <Helmet>
       <meta charSet="utf-8" />
       <title>Dor Lugasi-Gal | Software Engineer</title>
+      <link
+        href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+        rel="stylesheet"
+      />
     </Helmet>
     <Content />
     <SocialBar />
