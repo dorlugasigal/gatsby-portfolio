@@ -39,7 +39,7 @@ export default function Icon(props) {
         style={linkStyle}
         role="button"
         tabIndex="-1"
-        className="icon-wrapper"
+        className="icon-circle"
       >
         <IconContext.Provider
           value={{ color: "white", size: size, className: "global-class-name" }}

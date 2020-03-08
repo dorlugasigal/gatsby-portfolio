@@ -32,30 +32,31 @@ body {
   justify-content: center; /*centers items on the line (the x-axis by default)*/
   align-items: center; /*centers items on the cross-axis (y by default)*/
 }
-.icon-0 {
+
+.icon-entrance-0 {
   animation: bounce-in-top 1.2s both 3s;
 }
-.icon-1 {
+.icon-entrance-1 {
   animation: bounce-in-top 1.2s both 3.1s;
 }
-.icon-2 {
+.icon-entrance-2 {
   animation: bounce-in-top 1.2s both 3.2s;
 }
-.icon-3 {
+.icon-entrance-3 {
   animation: bounce-in-top 1.2s both 3.3s;
 }
-.icon-4 {
+.icon-entrance-4 {
   animation: bounce-in-top 1.2s both 3.4s;
 }
-.icon-5 {
+.icon-entrance-5 {
   animation: bounce-in-top 1.2s both 3.5s;
 }
-.icon-6 {
+.icon-entrance-6 {
   animation: bounce-in-top 1.2s both 3.6s;
 }
 
-.icon-wrapper {
-  margin: 5px;
+.icon-circle {
+  margin: 10px;
   padding: 15px;
   border-radius: 50%;
   line-height: 15px;
@@ -67,6 +68,7 @@ body {
     padding: 5px;
   }
 }
+
 .socialbar {
   flex: 1;
   display: flex;
@@ -80,36 +82,24 @@ body {
     flex: 2;
   }
 
-  .icon {
-    text-align: center;
-    flex: 1;
-    background-color: transparent;
-    transition: all 0.4s;
-    margin: 0 5px;
-
+  .icon-wrapper {
+    transition: all 0.35s;
     @media (max-width: 700px) {
       flex: 1 0 25%;
-    }
-    .social-icon {
-      @media (max-width: 700px) {
-        width: 70px !important;
-        height: 70px !important;
-      }
     }
 
     &:hover {
       z-index: 15px;
-      margin-top: -10px;
+      margin-top: -18px;
       bottom: 10px;
+
       @media (max-width: 700px) {
         margin-top: 0px;
       }
     }
-    .social-svg-background {
-      fill: white !important;
-    }
   }
 }
+
 .wrapper {
   width: 80%;
   align-items: center;
@@ -119,14 +109,6 @@ body {
   @media (max-width: 700px) {
     flex: 3;
     width: 100%;
-  }
-  @keyframes appear {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 50%;
-    }
   }
 
   .name-wrapper {
@@ -138,6 +120,11 @@ body {
     font-size: 50px;
     font-family: "Roboto", sans-serif;
     letter-spacing: 5px;
+
+    @media (max-width: 700px) {
+      font-size: 15px;
+    }
+
     .hi {
       transition: all 0.2s;
       animation: fade-down 1s ease-in-out both 2.5s;
@@ -165,9 +152,8 @@ body {
     text-align: center;
     svg {
       @media (max-width: 700px) {
-        width: 70%;
-        height: 230px !important;
-        width: 230px !important;
+        height: 150px !important;
+        width: 150px !important;
       }
     }
 
@@ -383,5 +369,13 @@ body {
   100% {
     transform: translateY(0);
     animation-timing-function: ease-out;
+  }
+}
+@keyframes appear {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
   }
 }

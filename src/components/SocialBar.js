@@ -13,10 +13,10 @@ function SocialBar(props) {
       {socialLinks.links
         .filter(opt => opt.show)
         .map((item, ind) => {
-          const className = `icon-${ind} `
+          const className = `icon-entrance-${ind} `
           return (
             <div className={className}>
-              <div className="icon">
+              <div className="icon-wrapper">
                 <Icon
                   size={size}
                   icon={item.icon}
