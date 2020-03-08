@@ -6,7 +6,7 @@ function SocialBar(props) {
   const mediaQuery =
     typeof window !== "undefined" &&
     window.matchMedia("(max-width: 700px)").matches
-  const size = mediaQuery ? "20px" : "50px"
+  const size = mediaQuery ? "15px" : "50px"
 
   return (
     <div className="socialbar ">
