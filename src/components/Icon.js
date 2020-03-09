@@ -4,10 +4,6 @@ import { IconContext } from "react-icons"
 export default function Icon(props) {
   const { icon, url, background } = props
   const [hover, setHover] = useState(false)
-  const mediaQuery =
-    typeof window !== "undefined" &&
-    window.matchMedia("(max-width: 700px)").matches
-  const size = mediaQuery ? "15px" : "40px"
 
   const components = {
     github: FontAwesome.FaGithub,
@@ -45,7 +41,7 @@ export default function Icon(props) {
         className="icon-circle"
       >
         <IconContext.Provider
-          value={{ color: "white", size: size, className: "global-class-name" }}
+          value={{ color: "white", className: "global-class-name" }}
         >
           <IconName />
         </IconContext.Provider>
