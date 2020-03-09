@@ -54,7 +54,7 @@ body {
   width: 60%;
 
   @media (max-width: 700px) {
-    width: 90%;
+    width: 100%;
     flex: 1;
   }
   .icon-wrapper {
@@ -96,6 +96,7 @@ body {
     flex: 1;
     width: 100%;
     margin-bottom: 80px;
+    align-content: center;
     flex-direction: row-reverse;
   }
   .name-wrapper {
@@ -108,10 +109,13 @@ body {
     font-family: "Roboto", sans-serif;
     letter-spacing: 5px;
     @media (max-width: 700px) {
+      width: 70%;
       font-weight: 200;
       font-family: $font;
       font-size: 20px;
-      margin: 20px 0 12px 0;
+      margin-bottom: 12px;
+      margin-left: 0;
+      margin-right: 0;
       letter-spacing: 3px;
     }
     .hi {
@@ -320,10 +324,12 @@ body {
 }
 @keyframes appear {
   0% {
+    margin-left: 0px;
     width: 0%;
   }
   100% {
     width: 50%;
+    margin-left: 15px;
   }
 }
 .icon-entrance-0 {
