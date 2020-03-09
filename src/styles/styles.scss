@@ -32,29 +32,6 @@ body {
   justify-content: center; /*centers items on the line (the x-axis by default)*/
   align-items: center; /*centers items on the cross-axis (y by default)*/
 }
-
-.icon-entrance-0 {
-  animation: bounce-in-top 1.2s both 3s;
-}
-.icon-entrance-1 {
-  animation: bounce-in-top 1.2s both 3.1s;
-}
-.icon-entrance-2 {
-  animation: bounce-in-top 1.2s both 3.2s;
-}
-.icon-entrance-3 {
-  animation: bounce-in-top 1.2s both 3.3s;
-}
-.icon-entrance-4 {
-  animation: bounce-in-top 1.2s both 3.4s;
-}
-.icon-entrance-5 {
-  animation: bounce-in-top 1.2s both 3.5s;
-}
-.icon-entrance-6 {
-  animation: bounce-in-top 1.2s both 3.6s;
-}
-
 .icon-circle {
   margin: 10px;
   padding: 15px;
@@ -68,7 +45,6 @@ body {
     padding: 7px;
   }
 }
-
 .socialbar {
   flex: 1;
   display: flex;
@@ -79,9 +55,8 @@ body {
 
   @media (max-width: 700px) {
     width: 90%;
-    flex: 2;
+    flex: 1;
   }
-
   .icon-wrapper {
     transition: all 0.3s;
     @media (max-width: 700px) {
@@ -98,7 +73,6 @@ body {
         margin-top: 0px;
       }
     }
-
     a {
       svg {
         width: 40px;
@@ -111,7 +85,6 @@ body {
     }
   }
 }
-
 .wrapper {
   width: 80%;
   align-items: center;
@@ -119,11 +92,12 @@ body {
   display: flex;
   justify-content: center;
   @media (max-width: 700px) {
-    flex: 3;
+    align-items: flex-end;
+    flex: 1;
     width: 100%;
+    margin-bottom: 80px;
     flex-direction: row-reverse;
   }
-
   .name-wrapper {
     cursor: default;
     color: $white;
@@ -133,12 +107,14 @@ body {
     font-size: 50px;
     font-family: "Roboto", sans-serif;
     letter-spacing: 5px;
-
     @media (max-width: 700px) {
+      font-weight: 200;
+      font-family: $font;
       font-size: 20px;
+      margin: 20px 20px 12px 20px;
+
       letter-spacing: 3px;
     }
-
     .hi {
       transition: all 0.2s;
       animation: fade-down 1s ease-in-out both 2.5s;
@@ -149,6 +125,9 @@ body {
         font-weight: 700;
         color: $text-color;
         transition: all 0.2s;
+        @media (max-width: 700px) {
+          font-weight: 400;
+        }
         &:hover {
           color: lighten($text-color, 10);
         }
@@ -159,7 +138,6 @@ body {
       animation: fade-up 1s ease-in-out both 2.5s;
     }
   }
-
   #logo-wrapper {
     animation: fade-in-top 3.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
     border-radius: 50%;
@@ -172,7 +150,6 @@ body {
         width: 100px;
       }
     }
-
     path:nth-child(1) {
       stroke-dasharray: 1201px;
       stroke-dashoffset: 1201px;
@@ -205,29 +182,24 @@ body {
     }
   }
 }
-
 @keyframes fill-white {
   0% {
     fill: transparent;
   }
   60% {
     stroke-dashoffset: 0;
-
     fill: transparent;
   }
   100% {
     stroke-dashoffset: 0;
-
     fill: white;
   }
 }
-
 @keyframes running-stroke {
   to {
     stroke-dashoffset: 0;
   }
 }
-
 @keyframes fill-purple-light {
   0% {
     fill: transparent;
@@ -241,7 +213,6 @@ body {
     stroke-dashoffset: 0;
   }
 }
-
 @keyframes fill-purple-dark {
   0% {
     fill: transparent;
@@ -255,7 +226,6 @@ body {
     fill: #5f3f7b;
   }
 }
-
 @keyframes fade-down {
   0% {
     opacity: 0;
@@ -267,7 +237,6 @@ body {
     transform: translateY(0);
   }
 }
-
 @keyframes fade-up {
   0% {
     opacity: 0;
@@ -286,7 +255,6 @@ body {
     opacity: 1;
   }
 }
-
 @keyframes fade-in-top {
   0% {
     -webkit-transform: translateY(-50px);
@@ -300,7 +268,6 @@ body {
     opacity: 1;
     box-shadow: none;
   }
-
   75% {
     box-shadow: 0px 0px 100px 0px rgba(185, 86, 241, 0.75),
       inset 0px 0px 60px 3px rgba(185, 86, 241, 0.75);
@@ -316,7 +283,6 @@ body {
     transform: scale(1);
   }
 }
-
 @keyframes bounce-in-top {
   0% {
     transform: translateY(-150px);
@@ -360,4 +326,25 @@ body {
   100% {
     width: 50%;
   }
+}
+.icon-entrance-0 {
+  animation: bounce-in-top 1.2s both 3s;
+}
+.icon-entrance-1 {
+  animation: bounce-in-top 1.2s both 3.1s;
+}
+.icon-entrance-2 {
+  animation: bounce-in-top 1.2s both 3.2s;
+}
+.icon-entrance-3 {
+  animation: bounce-in-top 1.2s both 3.3s;
+}
+.icon-entrance-4 {
+  animation: bounce-in-top 1.2s both 3.4s;
+}
+.icon-entrance-5 {
+  animation: bounce-in-top 1.2s both 3.5s;
+}
+.icon-entrance-6 {
+  animation: bounce-in-top 1.2s both 3.6s;
 }
