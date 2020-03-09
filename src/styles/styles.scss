@@ -83,12 +83,13 @@ body {
   }
 
   .icon-wrapper {
-    transition: all 0.35s;
+    transition: all 0.3s;
     @media (max-width: 700px) {
       flex: 1 0 25%;
     }
 
     &:hover {
+      transform: scale(1.2);
       z-index: 15px;
       margin-top: -18px;
       bottom: 10px;
