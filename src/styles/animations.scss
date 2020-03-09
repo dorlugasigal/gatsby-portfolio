@@ -1,0 +1,147 @@
+@keyframes fill-white {
+  0% {
+    fill: transparent;
+  }
+  60% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: white;
+  }
+}
+@keyframes running-stroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fill-purple-light {
+  0% {
+    fill: transparent;
+  }
+  80% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  100% {
+    fill: #9265b8;
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fill-purple-dark {
+  0% {
+    fill: transparent;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #5f3f7b;
+  }
+}
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in-top {
+  0% {
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  65% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    background-color: transparent;
+    opacity: 1;
+    box-shadow: none;
+  }
+  75% {
+    box-shadow: 0px 0px 100px 0px rgba(185, 86, 241, 0.75),
+      inset 0px 0px 60px 3px rgba(185, 86, 241, 0.75);
+    transform: scale(1.1);
+    border: none;
+  }
+  85% {
+    box-shadow: 0px 0px 10px 0px rgba(255, 129, 255, 0.75),
+      inset 0px 0px 60px 3px rgba(255, 129, 255, 0.75);
+  }
+  100% {
+    box-shadow: none;
+    transform: scale(1);
+  }
+}
+@keyframes bounce-in-top {
+  0% {
+    transform: translateY(-150px);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    transform: translateY(-65px);
+    animation-timing-function: ease-in;
+  }
+  72% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  81% {
+    transform: translateY(-28px);
+    animation-timing-function: ease-in;
+  }
+  90% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  95% {
+    transform: translateY(-8px);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes appear {
+  0% {
+    margin-left: 0px;
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+    margin-left: 15px;
+  }
+}

@@ -10,7 +10,10 @@ function SocialBar(props) {
         .map((item, ind) => {
           const className = `icon-entrance-${ind}`
           return (
-            <div key={className} className={className}>
+            <div
+              style={{ animation: `bounce-in-top 1.2s both 3.${ind}s` }}
+              key={className}
+            >
               <div className="icon-wrapper">
                 <Icon
                   icon={item.icon}

@@ -2,7 +2,7 @@ import React from "react"
 
 function Logo() {
   return (
-    <div id="logo-wrapper">
+    <div className="logo-wrapper">
       <svg
         id="logo"
         viewBox="6 3 388 390"

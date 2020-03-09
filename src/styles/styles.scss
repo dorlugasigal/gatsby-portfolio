@@ -1,14 +1,11 @@
 $font: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
-//colors
+@import "./animations.scss";
+
 $white: #fff;
-$black: #000;
-$secondary: rgb(95, 63, 123);
 $primary: rgb(146, 101, 184);
-$off-white: #f2f4f5;
-$primary-radius: 20px;
-$secondary-radius: 60px;
+$secondary: rgb(95, 63, 123);
 $text-color: rgb(197, 102, 226);
 html,
 body {
@@ -31,325 +28,156 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.icon-circle {
-  margin: 10px;
-  padding: 15px;
-  border-radius: 50%;
-  line-height: 15px;
-  background-color: $primary;
-  transition: all 0.3s ease-in-out;
-  display: block;
-  @media (max-width: 700px) {
-    margin: 4px;
-    padding: 7px;
-  }
-}
-.socialbar {
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 60%;
-
-  @media (max-width: 700px) {
-    width: 100%;
-    flex: 1;
-  }
-  .icon-wrapper {
-    transition: all 0.3s;
+  .wrapper {
+    width: 80%;
+    align-items: center;
+    flex: 2;
+    display: flex;
+    justify-content: center;
     @media (max-width: 700px) {
-      flex: 1 0 25%;
+      align-items: flex-end;
+      flex: 1;
+      width: 100%;
+      margin-bottom: 80px;
+      align-content: center;
+      flex-direction: row-reverse;
     }
-
-    &:hover {
-      transform: scale(1.2);
-      z-index: 15px;
-      margin-top: -18px;
-      bottom: 10px;
-
+    .name-wrapper {
+      cursor: default;
+      color: $white;
+      white-space: nowrap;
+      margin: 20px;
+      animation: appear 2s ease-in-out both 1.5s;
+      font-size: 50px;
+      font-family: "Roboto", sans-serif;
+      letter-spacing: 5px;
       @media (max-width: 700px) {
-        margin-top: 0px;
+        width: 70%;
+        font-weight: 200;
+        font-family: $font;
+        font-size: 16px;
+        margin-bottom: 12px;
+        margin-left: 0;
+        margin-right: 0;
+        letter-spacing: 3px;
       }
-    }
-    a {
-      svg {
-        width: 40px;
-        height: 40px;
-        @media (max-width: 700px) {
-          width: 25px;
-          height: 25px;
-        }
-      }
-    }
-  }
-}
-.wrapper {
-  width: 80%;
-  align-items: center;
-  flex: 2;
-  display: flex;
-  justify-content: center;
-  @media (max-width: 700px) {
-    align-items: flex-end;
-    flex: 1;
-    width: 100%;
-    margin-bottom: 80px;
-    align-content: center;
-    flex-direction: row-reverse;
-  }
-  .name-wrapper {
-    cursor: default;
-    color: $white;
-    white-space: nowrap;
-    margin: 20px;
-    animation: appear 2s ease-in-out both 1.5s;
-    font-size: 50px;
-    font-family: "Roboto", sans-serif;
-    letter-spacing: 5px;
-    @media (max-width: 700px) {
-      width: 70%;
-      font-weight: 200;
-      font-family: $font;
-      font-size: 18px;
-      margin-bottom: 12px;
-      margin-left: 0;
-      margin-right: 0;
-      letter-spacing: 3px;
-    }
-    .hi {
-      transition: all 0.2s;
-      animation: fade-down 1s ease-in-out both 2.5s;
-    }
-    .name {
-      span {
-        text-transform: uppercase;
-        font-weight: 700;
-        color: $text-color;
+      .hi {
         transition: all 0.2s;
+        animation: fade-down 1s ease-in-out both 2.5s;
+      }
+      .name {
+        animation: fade 1s ease-in-out both 2.5s;
+        span {
+          text-transform: uppercase;
+          font-weight: 700;
+          color: $text-color;
+          transition: all 0.2s;
+          @media (max-width: 700px) {
+            font-weight: 400;
+          }
+          &:hover {
+            color: lighten($text-color, 10);
+          }
+        }
+      }
+      .prof {
+        animation: fade-up 1s ease-in-out both 2.5s;
+      }
+    }
+    .logo-wrapper {
+      animation: fade-in-top 3.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+      border-radius: 50%;
+      text-align: center;
+      svg {
+        height: 400px;
+        width: 400px;
         @media (max-width: 700px) {
-          font-weight: 400;
+          height: 100px;
+          width: 100px;
         }
-        &:hover {
-          color: lighten($text-color, 10);
+        path:nth-child(1) {
+          stroke-dasharray: 1201px;
+          stroke-dashoffset: 1201px;
+          animation: fill-purple-dark 2s ease-in-out forwards 0.5s;
+        }
+        path:nth-child(3) {
+          stroke-dasharray: 2921px;
+          stroke-dashoffset: -2921px;
+          animation: fill-purple-light 2s ease-in-out forwards 0.5s;
+        }
+        path:nth-child(5) {
+          stroke-dasharray: 1968px;
+          stroke-dashoffset: 1968px;
+          animation: fill-white 2.5s ease-in-out forwards 1s;
+        }
+        #white-stroke {
+          stroke-dasharray: 1968px;
+          stroke-dashoffset: -1968px;
+          animation: running-stroke 1s ease-in-out forwards;
+        }
+        #light-stroke {
+          stroke-dasharray: 2921px;
+          stroke-dashoffset: -2921px;
+          animation: running-stroke 0.5s ease-in-out forwards 0.1;
+        }
+        #dark-stroke {
+          stroke-dasharray: 1201px;
+          stroke-dashoffset: 1201px;
+          animation: running-stroke 0.5s ease-in-out forwards 0.1;
         }
       }
-      animation: fade 1s ease-in-out both 2.5s;
     }
-    .prof {
-      animation: fade-up 1s ease-in-out both 2.5s;
-    }
-  }
-  #logo-wrapper {
-    animation: fade-in-top 3.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-    border-radius: 50%;
-    text-align: center;
-    svg {
-      height: 400px;
-      width: 400px;
-      @media (max-width: 700px) {
-        height: 100px;
-        width: 100px;
-      }
-    }
-    path:nth-child(1) {
-      stroke-dasharray: 1201px;
-      stroke-dashoffset: 1201px;
-      animation: fill-purple-dark 2s ease-in-out forwards 0.5s;
-    }
-    path:nth-child(3) {
-      stroke-dasharray: 2921px;
-      stroke-dashoffset: -2921px;
-      animation: fill-purple-light 2s ease-in-out forwards 0.5s;
-    }
-    path:nth-child(5) {
-      stroke-dasharray: 1968px;
-      stroke-dashoffset: 1968px;
-      animation: fill-white 2.5s ease-in-out forwards 1s;
-    }
-    #white-stroke {
-      stroke-dasharray: 1968px;
-      stroke-dashoffset: -1968px;
-      animation: running-stroke 1s ease-in-out forwards;
-    }
-    #light-stroke {
-      stroke-dasharray: 2921px;
-      stroke-dashoffset: -2921px;
-      animation: running-stroke 0.5s ease-in-out forwards 0.1;
-    }
-    #dark-stroke {
-      stroke-dasharray: 1201px;
-      stroke-dashoffset: 1201px;
-      animation: running-stroke 0.5s ease-in-out forwards 0.1;
-    }
-  }
-}
-@keyframes fill-white {
-  0% {
-    fill: transparent;
-  }
-  60% {
-    stroke-dashoffset: 0;
-    fill: transparent;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    fill: white;
-  }
-}
-@keyframes running-stroke {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-@keyframes fill-purple-light {
-  0% {
-    fill: transparent;
-  }
-  80% {
-    stroke-dashoffset: 0;
-    fill: transparent;
-  }
-  100% {
-    fill: #9265b8;
-    stroke-dashoffset: 0;
-  }
-}
-@keyframes fill-purple-dark {
-  0% {
-    fill: transparent;
-  }
-  50% {
-    stroke-dashoffset: 0;
-    fill: transparent;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    fill: #5f3f7b;
-  }
-}
-@keyframes fade-down {
-  0% {
-    opacity: 0;
-    transform: translateY(-80px);
   }
 
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+  .socialbar {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 60%;
+
+    @media (max-width: 700px) {
+      width: 100%;
+      flex: 1;
+    }
+    .icon-wrapper {
+      transition: all 0.3s;
+      @media (max-width: 700px) {
+        flex: 1 0 25%;
+      }
+
+      &:hover {
+        transform: scale(1.2);
+        z-index: 15px;
+        margin-top: -18px;
+        bottom: 10px;
+
+        @media (max-width: 700px) {
+          margin-top: 0px;
+        }
+      }
+      .icon-circle {
+        margin: 10px;
+        padding: 15px;
+        border-radius: 50%;
+        line-height: 15px;
+        background-color: $primary;
+        transition: all 0.3s ease-in-out;
+        display: block;
+        @media (max-width: 700px) {
+          margin: 4px;
+          padding: 7px;
+        }
+        svg {
+          width: 40px;
+          height: 40px;
+          @media (max-width: 700px) {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+    }
   }
-}
-@keyframes fade-up {
-  0% {
-    opacity: 0;
-    transform: translateY(80px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fade-in-top {
-  0% {
-    -webkit-transform: translateY(-50px);
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-  65% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    background-color: transparent;
-    opacity: 1;
-    box-shadow: none;
-  }
-  75% {
-    box-shadow: 0px 0px 100px 0px rgba(185, 86, 241, 0.75),
-      inset 0px 0px 60px 3px rgba(185, 86, 241, 0.75);
-    transform: scale(1.1);
-    border: none;
-  }
-  85% {
-    box-shadow: 0px 0px 10px 0px rgba(255, 129, 255, 0.75),
-      inset 0px 0px 60px 3px rgba(255, 129, 255, 0.75);
-  }
-  100% {
-    box-shadow: none;
-    transform: scale(1);
-  }
-}
-@keyframes bounce-in-top {
-  0% {
-    transform: translateY(-150px);
-    animation-timing-function: ease-in;
-    opacity: 0;
-  }
-  38% {
-    transform: translateY(0);
-    animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  55% {
-    transform: translateY(-65px);
-    animation-timing-function: ease-in;
-  }
-  72% {
-    transform: translateY(0);
-    animation-timing-function: ease-out;
-  }
-  81% {
-    transform: translateY(-28px);
-    animation-timing-function: ease-in;
-  }
-  90% {
-    transform: translateY(0);
-    animation-timing-function: ease-out;
-  }
-  95% {
-    transform: translateY(-8px);
-    animation-timing-function: ease-in;
-  }
-  100% {
-    transform: translateY(0);
-    animation-timing-function: ease-out;
-  }
-}
-@keyframes appear {
-  0% {
-    margin-left: 0px;
-    width: 0%;
-  }
-  100% {
-    width: 50%;
-    margin-left: 15px;
-  }
-}
-.icon-entrance-0 {
-  animation: bounce-in-top 1.2s both 3s;
-}
-.icon-entrance-1 {
-  animation: bounce-in-top 1.2s both 3.1s;
-}
-.icon-entrance-2 {
-  animation: bounce-in-top 1.2s both 3.2s;
-}
-.icon-entrance-3 {
-  animation: bounce-in-top 1.2s both 3.3s;
-}
-.icon-entrance-4 {
-  animation: bounce-in-top 1.2s both 3.4s;
-}
-.icon-entrance-5 {
-  animation: bounce-in-top 1.2s both 3.5s;
-}
-.icon-entrance-6 {
-  animation: bounce-in-top 1.2s both 3.6s;
 }
