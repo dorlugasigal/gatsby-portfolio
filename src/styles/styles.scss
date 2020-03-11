@@ -126,12 +126,12 @@ body {
         #light-stroke {
           stroke-dasharray: 2921px;
           stroke-dashoffset: -2921px;
-          animation: running-stroke 0.5s ease-in-out forwards 0.1;
+          animation: running-stroke 2s ease-in-out forwards;
         }
         #dark-stroke {
           stroke-dasharray: 1201px;
           stroke-dashoffset: 1201px;
-          animation: running-stroke 0.5s ease-in-out forwards 0.1;
+          animation: running-stroke 2s ease-in-out forwards;
         }
       }
     }
