@@ -92,9 +92,16 @@ body {
       animation: fade-in-top 3.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
       border-radius: 50%;
       text-align: center;
+
       svg {
+        transition: all 1s;
         height: 400px;
         width: 400px;
+        &:hover {
+          @media (min-width: 700px) {
+            transform: scale(1.05);
+          }
+        }
         @media (max-width: 700px) {
           height: 100px;
           width: 100px;
