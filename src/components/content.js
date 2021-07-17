@@ -9,7 +9,7 @@ const Content = () => (
       <div className="name">
         I'm <span>Dor Lugasi-Gal</span>,
       </div>
-      <div className="prof">Software Developer.</div>
+      <div className="prof">Senior Software Developer.</div>
     </div>
     <Logo />
   </div>
