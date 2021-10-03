@@ -13,6 +13,7 @@ export default function Icon(props) {
     youtube: FontAwesome.FaYoutube,
     linkedIn: FontAwesome.FaLinkedinIn,
     mail: FontAwesome.FaMailBulk,
+    whatsapp: FontAwesome.FaWhatsapp,
     default: FontAwesome.FaQuestion,
   }
   const toggleHover = () => {
