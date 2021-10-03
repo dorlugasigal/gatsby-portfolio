@@ -44,7 +44,7 @@
     },
     {
       "show": true,
-      "url": "https://api.whatsapp.com/send?phone=0526889753&text=Hi%20Dor!",
+      "url": "https://api.whatsapp.com/send?phone=972526889753&text=Hi%20Dor!",
       "icon": "whatsapp",
       "background": "rgb(73,201,88)"
     }
