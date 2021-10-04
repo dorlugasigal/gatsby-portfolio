@@ -2,12 +2,6 @@
   "links": [
     {
       "show": true,
-      "url": "https://github.com/dorlugasigal",
-      "icon": "github",
-      "background": "rgb(124,58,168)"
-    },
-    {
-      "show": true,
       "url": "https://www.linkedin.com/in/dor-lugasi-104736131/",
       "icon": "linkedIn",
       "background": "rgb(0,119,181)"
@@ -20,21 +14,15 @@
     },
     {
       "show": true,
+      "url": "https://github.com/dorlugasigal",
+      "icon": "github",
+      "background": "rgb(124,58,168)"
+    },
+    {
+      "show": true,
       "url": "mailto:DorLugasiGal@gmail.com",
       "icon": "mail",
       "background": "rgb(185,62,52)"
-    },
-    {
-      "show": true,
-      "url": "https://www.youtube.com/channel/UCM-rav7cI8i8KFQ6HgjKszA",
-      "icon": "youtube",
-      "background": "rgb(255,0,0)"
-    },
-    {
-      "show": true,
-      "url": "https://www.instagram.com/dorlugasigal/",
-      "icon": "instagram",
-      "background": "rgb(202,33,85)"
     },
     {
       "show": true,
@@ -44,9 +32,21 @@
     },
     {
       "show": true,
+      "url": "https://www.instagram.com/dorlugasigal/",
+      "icon": "instagram",
+      "background": "rgb(202,33,85)"
+    },
+    {
+      "show": true,
       "url": "https://api.whatsapp.com/send?phone=972526889753&text=Hi%20Dor!",
       "icon": "whatsapp",
       "background": "rgb(73,201,88)"
+    },
+    {
+      "show": true,
+      "url": "https://www.youtube.com/channel/UCM-rav7cI8i8KFQ6HgjKszA",
+      "icon": "youtube",
+      "background": "rgb(255,0,0)"
     }
   ]
 }

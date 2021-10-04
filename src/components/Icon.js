@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import * as FontAwesome from "react-icons/fa"
+import { FiMail } from "react-icons/fi";
 import { IconContext } from "react-icons"
 export default function Icon(props) {
   const { icon, url, background } = props
@@ -12,7 +13,7 @@ export default function Icon(props) {
     facebook: FontAwesome.FaFacebookF,
     youtube: FontAwesome.FaYoutube,
     linkedIn: FontAwesome.FaLinkedinIn,
-    mail: FontAwesome.FaMailBulk,
+    mail: FiMail,
     whatsapp: FontAwesome.FaWhatsapp,
     default: FontAwesome.FaQuestion,
   }
