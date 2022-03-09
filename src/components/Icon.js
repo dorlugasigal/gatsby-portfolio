@@ -1,7 +1,8 @@
 import React, { useState } from "react"
 import * as FontAwesome from "react-icons/fa"
 import { FiMail } from "react-icons/fi";
-import { BsMedium } from "react-icons/bs";
+import { SiMedium } from "react-icons/si";
+
 import { IconContext } from "react-icons"
 export default function Icon(props) {
   const { icon, url, background } = props
@@ -11,7 +12,7 @@ export default function Icon(props) {
     github: FontAwesome.FaGithub,
     stackoverflow: FontAwesome.FaStackOverflow,
     instagram: FontAwesome.FaInstagram,
-    medium: BsMedium,
+    medium: SiMedium,
     facebook: FontAwesome.FaFacebookF,
     youtube: FontAwesome.FaYoutube,
     linkedIn: FontAwesome.FaLinkedinIn,
