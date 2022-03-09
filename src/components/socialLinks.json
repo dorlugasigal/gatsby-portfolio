@@ -26,6 +26,12 @@
     },
     {
       "show": true,
+      "url": "https://medium.com/@dorlugasigal",
+      "icon": "medium",
+      "background": "rgb(73,201,88)"
+    },
+    {
+      "show": true,
       "url": "https://www.facebook.com/Dor.Lugasi",
       "icon": "facebook",
       "background": "rgb(66,103,178)"
@@ -34,12 +40,6 @@
       "show": true,
       "url": "https://www.instagram.com/dorlugasigal/",
       "icon": "instagram",
-      "background": "rgb(202,33,85)"
-    },
-    {
-      "show": true,
-      "url": "https://medium.com/@dorlugasigal",
-      "icon": "medium",
       "background": "rgb(202,33,85)"
     },
     {
