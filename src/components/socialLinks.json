@@ -38,6 +38,12 @@
     },
     {
       "show": true,
+      "url": "https://medium.com/@dorlugasigal",
+      "icon": "medium",
+      "background": "rgb(202,33,85)"
+    },
+    {
+      "show": true,
       "url": "https://api.whatsapp.com/send?phone=972526889753&text=Hi%20Dor!",
       "icon": "whatsapp",
       "background": "rgb(73,201,88)"

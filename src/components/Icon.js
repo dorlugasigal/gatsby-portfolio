@@ -10,6 +10,7 @@ export default function Icon(props) {
     github: FontAwesome.FaGithub,
     stackoverflow: FontAwesome.FaStackOverflow,
     instagram: FontAwesome.FaInstagram,
+    medium: FontAwesome.FaMedium,
     facebook: FontAwesome.FaFacebookF,
     youtube: FontAwesome.FaYoutube,
     linkedIn: FontAwesome.FaLinkedinIn,
