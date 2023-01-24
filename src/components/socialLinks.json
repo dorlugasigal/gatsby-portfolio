@@ -2,7 +2,7 @@
   "links": [
     {
       "show": true,
-      "url": "https://www.linkedin.com/in/dor-lugasi-104736131/",
+      "url": "https://www.linkedin.com/in/dor-lugasi-gal/",
       "icon": "linkedIn",
       "background": "rgb(0,119,181)"
     },
@@ -29,12 +29,6 @@
       "url": "https://medium.com/@dorlugasigal",
       "icon": "medium",
       "background": "rgb(73,201,88)"
-    },
-    {
-      "show": true,
-      "url": "https://www.facebook.com/Dor.Lugasi",
-      "icon": "facebook",
-      "background": "rgb(66,103,178)"
     },
     {
       "show": true,
