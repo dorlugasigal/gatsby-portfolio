@@ -20,6 +20,12 @@
     },
     {
       "show": true,
+      "url": "https://devblogs.microsoft.com/ise/author/dorlugasigal/",
+      "icon": "microsoft",
+      "background": "rgb(0,120,215)"
+    },
+    {
+      "show": true,
       "url": "mailto:DorLugasiGal@gmail.com",
       "icon": "mail",
       "background": "rgb(185,62,52)"

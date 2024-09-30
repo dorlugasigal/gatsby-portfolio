@@ -18,6 +18,7 @@ export default function Icon(props) {
     linkedIn: FontAwesome.FaLinkedinIn,
     mail: FiMail,
     whatsapp: FontAwesome.FaWhatsapp,
+    microsoft: FontAwesome.FaMicrosoft,
     default: FontAwesome.FaQuestion,
   }
   const toggleHover = () => {
